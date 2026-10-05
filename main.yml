@@ -1,0 +1,64 @@
+#pipeline name/workflow name
+name: ETL pipeline
+
+on:
+  push:
+      branches:
+           - main
+
+
+jobs:
+
+  job1:    
+    
+    runs-on: ubuntu-latest
+    steps:
+          
+            - name: print welcome message
+              run: echo 'welcome to github action'
+
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+          
+            - name: print welcome message
+              run: echo 'welcome to github action'
+
+  job3:
+    needs: job2
+    
+    runs-on: ubuntu-latest
+    steps:
+          
+            - name: print welcome message
+              run: echo 'welcome to github action'
+
+  job4:
+    needs: job3
+   
+    runs-on: ubuntu-latest
+    steps:
+          
+            - name: print welcome message
+              run: echo 'welcome to github action'
+
+  job5:
+    needs: job4
+    
+    runs-on: ubuntu-latest
+    steps:
+          
+            - name: print welcome message
+              run: echo 'welcome to github action'
+
+  job6:
+
+    needs: job4,job5
+    
+    runs-on: ubuntu-latest
+    steps:
+          
+            - name: print welcome message
+              run: echo 'welcome to github action'
+
