@@ -54,7 +54,7 @@ jobs:
 
   job6:
 
-    needs: job4,job5
+    needs: job5
     
     runs-on: ubuntu-latest
     steps:
